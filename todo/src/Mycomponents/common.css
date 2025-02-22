@@ -1,0 +1,217 @@
+.nav {
+    height: 60px;
+    width: 100%;
+    background-color: #FFB085;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#search {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.info{
+  height:97vh;
+  width:100vw;
+  background-color: #FFF7F1;
+}
+.navKaNav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:1700px;
+}
+.log{
+    display: flex;
+    margin-right:7px;
+    background-color: #FFB085;
+  color: #3E2C26; 
+  border: none;
+  padding: 10px 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.signIn{
+    background-color: #FFB085; 
+  color: #3E2C26; 
+  border: none;
+  padding: 10px 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.writing1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:35vh;
+}
+.writing2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.mainLogin_det {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.boxes{
+    margin-top: 30px;
+}
+.pass{
+    margin-top: 10px;
+}
+.buttonlog{
+    margin-top:20px;
+    margin-left: 60px;
+}
+.mainLogin_det{
+    background-color:#FFF7F1;
+}
+.nav_main_contents{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 65vw;
+    justify-content: space-evenly;
+}
+.userf{
+    margin-left: 20px;
+    
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #2C3E50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.sidebar.collapsed {
+    width: 60px; 
+}
+.menu-items {
+    display: flex;
+    flex-direction: column; 
+    height: 100%; 
+    padding-top: 40px;
+    padding-left: 20px;
+    
+}
+.menu-items h5{
+    cursor: pointer;
+}
+.toggle-btn {
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.3s ease-in-out;
+}
+
+.toggle-btn:hover {
+    background: lightgray;
+}
+
+.collapsed .menu-items h5 {
+    display: none;
+
+}
+.wel{
+    padding-top: 7px;
+    padding-left: 10px;
+    width: 100vw;
+}
+
+
+.task-list {
+    margin-top: 10px;
+}
+
+.task {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.dash{
+    display:flex;
+
+}
+
+.task-section {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: space-around;
+}
+
+.task-category {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 100%;
+
+}
+
+.task-list h2 {
+    background: #E3E3E3;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.task-item h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.delete-btn {
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    color: darkred;
+}
