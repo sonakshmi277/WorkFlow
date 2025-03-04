@@ -10,12 +10,14 @@ export default function SignUp(){
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/users", {
+            await axios.post("http://localhost:5000/users", {
                 userName,
                 email,
                 password
             });
-            console.log("Signup Success:", response.data);
+            console.log("Signup Success");
+            navigate("/login");
+            
         } catch (error) {
             console.error("Signup Error:", error.response ? error.response.data : error);
         }

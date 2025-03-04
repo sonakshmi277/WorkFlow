@@ -215,3 +215,7 @@
 .delete-btn:hover {
     color: darkred;
 }
+
+.absolute{
+    background-color: #3E2C26;
+}

@@ -15,7 +15,7 @@ export default function Login(){
             });
             console.log("Signin Success:", response.data);
             if(response.data==="Success"){
-                navigate('/dashboard')
+                navigate('/dashboard',{ state: { userName } })
             }else{
                 alert(response.data);
             }
