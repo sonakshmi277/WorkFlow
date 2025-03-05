@@ -64,9 +64,7 @@ export default function Settings() {
     <div className="settings-wrapper">
       <div className="settings-container">
         <div className="settings-header">Settings</div>
-
-        {/* Change Email */}
-        <div className="input-group">
+     <div className="input-group">
           <label>Change Email</label>
           <input
             type="email"
@@ -75,8 +73,6 @@ export default function Settings() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-
-        {/* Change Username */}
         <div className="input-group">
           <label>Change Username</label>
           <input
@@ -86,16 +82,10 @@ export default function Settings() {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-
-        {/* Save Changes Button */}
         <button className="save-button" onClick={handleSave}>Save Changes</button>
-
-        {/* Change Password Button */}
         <button className="change-password-button" onClick={handleChangePassword}>
           Change Password
         </button>
-
-        {/* Password Change Modal */}
         {showPasswordPrompt && (
           <div className="modal">
             <div className="modal-content">
@@ -121,8 +111,6 @@ export default function Settings() {
             </div>
           </div>
         )}
-
-        {/* Username Confirmation Modal (if needed) */}
         {showUsernamePrompt && (
           <div className="modal">
             <div className="modal-content">
