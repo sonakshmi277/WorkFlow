@@ -108,5 +108,48 @@ app.post('/get_tasks', async (req, res) => {
     }
 });
 
+app.post('/update_pass', async (req, res) => {
+    try {
+        const { userName, password } = req.body;
 
+        const user = await User.findOne({ userName });
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
+
+        await User.findOneAndUpdate(
+            { userName },
+            { $set: { password } },
+            { new: true, upsert: true }
+        );
+
+        res.json({ message: "Password updated successfully!" });
+    } catch (err) {
+        console.log("Error updating password:", err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+
+app.post('/update_email_username', async (req, res) => {
+    try {
+        const { userName, password, email } = req.body;
+
+        const user = await User.findOne({ userName });
+        if (!user || user.password !== password) {
+            return res.status(404).json({ error: "User not found or incorrect password" });
+        }
+
+        await User.findOneAndUpdate(
+            { userName },
+            { $set: { email, userName } },
+            { new: true, upsert: true }
+        );
+
+        res.json({ message: "Email and username updated successfully!" });
+    } catch (err) {
+        console.log("Error updating email/username:", err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
  app.listen(5000, () => console.log("Server running on port 5000"));

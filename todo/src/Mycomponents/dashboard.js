@@ -1,8 +1,6 @@
 import React, { useState ,useEffect} from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import "./common.css";
 
 export default function Dashboard() {
@@ -107,9 +105,7 @@ export default function Dashboard() {
                         placeholder="Search your tasks"
                         onChange={(e) => setSearchTask(e.target.value)}
                     />
-                    <div className="userf">
-                        <FontAwesomeIcon icon={faUserCircle} style={{ fontSize: '33px' }} onClick={() => setOpen(!open)} />
-                    </div>
+                    
                 </div>
             </div>
 
@@ -120,7 +116,6 @@ export default function Dashboard() {
                     </button>
                     <div className="menu-items">
                         <h5 onClick={() => navigate('/dashboard')}>Home</h5>
-                        <h5 onClick={() => navigate('/analytics')}>Analytics</h5>
                         <h5 onClick={() => navigate('/settings')}>Settings</h5>
                         <h5 onClick={handleLogout}>Logout</h5>
                     </div>
